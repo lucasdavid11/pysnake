@@ -144,16 +144,16 @@ left = False
 
 
 #FONT VARIABLES INITIALIZATION
-font = pygame.font.SysFont('SF Pixelate', 30, True, False)
-font1 = pygame.font.SysFont('SF Pixelate', 14, True, False)
-fontmenu = pygame.font.SysFont('SF Pixelate', 24, True, False)
-fontlosegame = pygame.font.SysFont('SF Pixelate', 22, True, False)
-fontlosegame2 = pygame.font.SysFont('SF Pixelate', 16, True, False)
+font = pygame.font.Font('font/SFPixelate.ttf', 30)
+font1 = pygame.font.Font('font/SFPixelate.ttf', 14)
+fontmenu = pygame.font.Font('font/SFPixelate.ttf', 24)
+fontlosegame = pygame.font.Font('font/SFPixelate.ttf', 22)
+fontlosegame2 = pygame.font.Font('font/SFPixelate.ttf', 16)
 
 
 #MUSIC VARIABLES INITIALIZATION
 gamemusic = pygame.mixer.music.load('audios\music.mp3')
-pygame.mixer.music.set_volume(0.2)
+pygame.mixer.music.set_volume(0.1)
 pygame.mixer.music.play(-1)
 winmusic = pygame.mixer.Sound('audios\win.mp3')
 losemusic = pygame.mixer.Sound('audios\lose.mp3')
@@ -213,6 +213,7 @@ while game:
     loadIcon()
     frames.tick(speed)
     window.fill(bg)
+    
     for event in pygame.event.get():
         if event.type == QUIT:
             game = False
@@ -226,30 +227,25 @@ while game:
 
             if finaltime-starttime != 0:
 
-                if event.key == K_s and event.key == K_d:
-                    up = True
-                    down = False
-                    right = False
-                    left = False
-                if event.key == K_w:
+                if event.key == K_w or event.key == K_UP:
                     if down == False:
                         up = True
                         down = False
                         right = False
                         left = False
-                if event.key == K_s:
+                if event.key == K_s or event.key == K_DOWN:
                     if up == False:
                         up = False
                         down = True
                         right = False
                         left = False
-                if event.key == K_d:
+                if event.key == K_d or event.key == K_RIGHT:
                     if left == False:
                         up = False
                         down = False
                         right = True
                         left = False
-                if event.key == K_a:
+                if event.key == K_a or event.key == K_LEFT:
                     if right == False:
                         up = False
                         down = False
