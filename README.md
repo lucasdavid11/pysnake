@@ -2,7 +2,7 @@
 
 # About the project
 
-pygame is a snake game styled by Lucas David Roscziniak Costa
+pygame is a snake game made and styled by Lucas David Roscziniak Costa
 
 # Technologies used
 
