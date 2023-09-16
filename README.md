@@ -25,7 +25,7 @@ Just run the file pysnake.exe
 - "R" - Restart the game
 - "M" - Mute the music
 
-# Autor
+# Author
 
 Lucas David Roscziniak Costa
 
